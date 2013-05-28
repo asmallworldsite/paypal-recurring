@@ -15,6 +15,8 @@ describe PayPal::Recurring::Response::Payment do
       ppr.request_payment
     }
 
+    it { should respond_to(:pending_reason) }
+
     it { should be_valid }
     it { should be_completed }
     it { should be_approved }
