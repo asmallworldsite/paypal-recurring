@@ -5,6 +5,7 @@ module PayPal
         mapping(
           :status         => :PAYMENTINFO_0_PAYMENTSTATUS,
           :pending_reason => :PAYMENTINFO_0_PENDINGREASON,
+          :currency       => :PAYMENTINFO_0_CURRENCYCODE,
           :amount         => :PAYMENTINFO_0_AMT,
           :fees           => :PAYMENTINFO_0_FEEAMT,
           :transaction_id => :PAYMENTINFO_0_TRANSACTIONID,
