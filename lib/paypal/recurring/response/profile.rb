@@ -21,7 +21,13 @@ module PayPal
           :frequency           => :BILLINGFREQUENCY,
           :currency            => :CURRENCYCODE,
           :amount              => :AMT,
-          :initial_amount      => :AGGREGATEOPTIONALAMT
+          :initial_amount      => :AGGREGATEOPTIONALAMT,
+          :address_1           => :STREET,
+          :address_2           => :STREET2,
+          :city                => :CITY,
+          :state               => :STATE,
+          :country             => :COUNTRYCODE,
+          :postal_code         => :ZIP
         )
 
         OUTSTANDING = {
