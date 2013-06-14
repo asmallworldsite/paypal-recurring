@@ -7,6 +7,8 @@ module PayPal
       attr_accessor :description
       attr_accessor :note
       attr_accessor :email
+      attr_accessor :extra_name
+      attr_accessor :extra_amount
       attr_accessor :failed
       attr_accessor :frequency
       attr_accessor :initial_amount
@@ -21,12 +23,14 @@ module PayPal
       attr_accessor :refund_type
       attr_accessor :return_url
       attr_accessor :start_at
+      attr_accessor :subtotal
       attr_accessor :token
       attr_accessor :transaction_id
       attr_accessor :item_category
       attr_accessor :item_name
       attr_accessor :item_amount
       attr_accessor :item_quantity
+      attr_accessor :tax_amount
       attr_accessor :trial_frequency
       attr_accessor :trial_length
       attr_accessor :trial_period
@@ -68,7 +72,11 @@ module PayPal
           :item_category,
           :item_name,
           :item_amount,
-          :item_quantity
+          :item_quantity,
+          :extra_name,
+          :extra_amount,
+          :subtotal,
+          :tax_amount
         ).merge(
           :payment_action => "Authorization",
           :no_shipping => 1,
@@ -141,7 +149,11 @@ module PayPal
           :item_category,
           :item_name,
           :item_amount,
-          :item_quantity
+          :item_quantity,
+          :extra_name,
+          :extra_amount,
+          :subtotal,
+          :tax_amount
         ).merge(:payment_action => "Sale")
 
         request.run(:payment, params)
@@ -196,7 +208,11 @@ module PayPal
           :item_category,
           :item_name,
           :item_amount,
-          :item_quantity
+          :item_quantity,
+          :extra_name,
+          :extra_amount,
+          :subtotal,
+          :tax_amount
         )
         request.run(:create_profile, params)
       end

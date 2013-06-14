@@ -5,7 +5,6 @@ module PayPal
         mapping(
           :status       => :CHECKOUTSTATUS,
           :email        => :EMAIL,
-          :email        => :EMAIL,
           :payer_id     => :PAYERID,
           :payer_status => :PAYERSTATUS,
           :first_name   => :FIRSTNAME,
@@ -13,6 +12,12 @@ module PayPal
           :country      => :COUNTRYCODE,
           :currency     => :CURRENCYCODE,
           :amount       => :AMT,
+          :subtotal     => :PAYMENTREQUEST_0_ITEMAMT,
+          :tax_amount   => :PAYMENTREQUEST_0_TAXAMT,
+          :item_name    => :L_PAYMENTREQUEST_0_NAME0,
+          :item_amount  => :L_PAYMENTREQUEST_0_AMT0,
+          :extra_name   => :L_PAYMENTREQUEST_0_NAME1,
+          :extra_amount => :L_PAYMENTREQUEST_0_AMT1,
           :description  => :DESC,
           :ipn_url      => :NOTIFYURL
         )
