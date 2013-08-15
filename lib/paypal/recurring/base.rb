@@ -244,7 +244,8 @@ module PayPal
           :start_at,
           :outstanding,
           :ipn_url,
-          :email
+          :email,
+          :tax_amount
         )
 
         request.run(:update_profile, params)
