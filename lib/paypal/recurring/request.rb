@@ -2,15 +2,16 @@ module PayPal
   module Recurring
     class Request
       METHODS = {
-        :checkout       => "SetExpressCheckout",
-        :payment        => "DoExpressCheckoutPayment",
-        :details        => "GetExpressCheckoutDetails",
-        :create_profile => "CreateRecurringPaymentsProfile",
-        :profile        => "GetRecurringPaymentsProfileDetails",
-        :manage_profile => "ManageRecurringPaymentsProfileStatus",
-        :update_profile => "UpdateRecurringPaymentsProfile",
-        :refund         => "RefundTransaction",
-        :transaction    => "GetTransactionDetails"
+        :checkout           => "SetExpressCheckout",
+        :payment            => "DoExpressCheckoutPayment",
+        :details            => "GetExpressCheckoutDetails",
+        :create_profile     => "CreateRecurringPaymentsProfile",
+        :profile            => "GetRecurringPaymentsProfileDetails",
+        :manage_profile     => "ManageRecurringPaymentsProfileStatus",
+        :update_profile     => "UpdateRecurringPaymentsProfile",
+        :refund             => "RefundTransaction",
+        :transaction        => "GetTransactionDetails",
+        :transaction_search => "TransactionSearch"
       }
 
       INITIAL_AMOUNT_ACTIONS = {
@@ -62,6 +63,7 @@ module PayPal
         :item_name             => "L_PAYMENTREQUEST_0_NAME0",
         :item_amount           => "L_PAYMENTREQUEST_0_AMT0",
         :item_quantity         => "L_PAYMENTREQUEST_0_QTY0",
+        :end_date              => "ENDDATE",
         :email                 => "EMAIL",
         :extra_name            => "L_PAYMENTREQUEST_0_NAME1",
         :extra_amount          => "L_PAYMENTREQUEST_0_AMT1",
@@ -84,6 +86,7 @@ module PayPal
         :return_url            => "RETURNURL",
         :signature             => "SIGNATURE",
         :start_at              => "PROFILESTARTDATE",
+        :start_date            => "STARTDATE",
         :subtotal              => "PAYMENTREQUEST_0_ITEMAMT",
         :token                 => "TOKEN",
         :transaction_id        => "TRANSACTIONID",
