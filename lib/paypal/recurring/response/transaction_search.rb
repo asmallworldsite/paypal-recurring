@@ -22,7 +22,7 @@ module PayPal
 
         def map_transactions
           ids = params.keys
-            .map { |k| /^L_TRANSACTIONID(?<id>\d)/.match(k) }
+            .map { |k| /^L_TRANSACTIONID(?<id>\d+)/.match(k) }
             .compact
             .map { |match| match[:id] }
 
