@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 require "paypal-recurring"
 
 Gem::Specification.new do |s|
-  s.name        = "paypal-recurring"
+  s.name        = "paypal-recurring_asw"
   s.version     = PayPal::Recurring::Version::STRING
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Nando Vieira"]
